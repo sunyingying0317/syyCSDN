@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>注册下一步</title>
+	<link rel="stylesheet" type="text/css" href="./css/registernext.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="container">
+			<div class="welcome">
+				<div class="welcomeHeadline"><a href="">&larr;</a><p>差一步就完成</p></div>
+				<div class="register">
+					<ul class="clearfix">
+						<li class="registerfirst"><span>1</span>注册码<strong> </strong></li>
+						<li class="registersecont"><span>2</span>用户名及密码<strong> </strong></li>
+						<li><span>3</span>完成</li>
+					</ul>
+				</div>
+			</div>
+			<div class="person">
+				<form action="" method="post"></form>
+				<input type="text"  class="personPhone" placeholder="请输入尾号为6407的手机号" v-model="userPhone">
+				<div class="getPhoneNull"><i></i><p>不能为空</p></div>
+				<!-- <div class="by aa">请输入手机号</div> -->
+				<input type="text"  class="personName" placeholder="用户名" v-model="userName">
+				<!-- <div class="cy aa">12344</div> -->
+				<input type="text" class="personPass" placeholder="输入密码" v-model="userPass">
+				<div class="dy aa">12344</div>
+				
+
+				<div class="null" v-show="isShow"><i></i><p>不能为空</p></div>
+				<div class="res" >
+					<a v-on:click="getData">立即注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/registernext.js"></script>
+</body>
+</html>

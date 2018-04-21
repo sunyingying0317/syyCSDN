@@ -1,0 +1,163 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width: 100%;
+	font-size: 62.5%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-size: 1.4rem;*/
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+a{
+	text-decoration: none;
+}
+.head{
+	height: 5rem;
+	/*background: red;*/
+}
+.head_left, .head_content, .head_right{
+	float: left;
+}
+.head_left, .head_right{
+	width: 20%;
+	height: 5rem;
+	/*background-color: blue;*/
+}
+.head_content{
+	width: 60%;
+	height: 5rem;
+	/*background-color: yellow;*/
+}
+.head_left a{
+	text-decoration: none;
+	padding-left: 1rem;
+	text-align: left;
+	line-height: 5rem;
+	font-size: 3rem;
+	color: #333;
+}
+.head_content img{
+	display: block;
+	margin: 1.2rem auto;
+}
+.head_search{
+	float: left;
+	width: 50%;
+	/*background-color: red;*/
+	height: 5rem;
+}
+.head_search img{
+	display: block;
+	margin: 1.2rem auto;
+}
+.head_logo{
+	float: left;
+	width: 50%;
+	height: 5rem;
+}
+.head_logo img{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	margin:1.2rem auto;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.personal{
+	margin-top: 3rem;
+	height: 7rem;
+	width: 100%;
+	/*background-color: red;*/
+}
+.personal i{
+	display: block;
+	float: left;
+	border-radius: 50%;
+	width: 7rem;
+	height: 7rem;
+}
+.personal i img{
+	border-radius: 100%;
+	width: 7rem;
+	height: 7rem;
+}
+.personal_con{
+	padding-left: 3rem;
+	float: left;
+}
+.personal_con h3{
+	font-size: 2rem;
+    color: #4f4f4f;
+    /*line-height: .6rem;*/
+    font-weight: 700;
+}
+.personal_con p{
+    color: #9e9e9e;
+	font-size: 1.8rem;
+	padding-top: 1.4rem;
+}
+.personal_con p span{
+	color: #6ab3df;
+	margin: 0 1rem 0 0.2rem;
+}
+/*.download{
+	height: 7rem;
+	width: 100%;
+	background-color: red;
+}*/
+.list{
+	margin-top: 2rem;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+.list{
+	padding-top: 1rem;
+	border-top: .1rem solid #ddd;
+}
+.list li{
+	list-style: none;
+	padding: 1rem 0 1rem 0;
+}
+.list li p{
+	font-size: 1.6rem;
+	color: #4f4f4f;
+}
+.list li p span{
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	text-decoration: none;
+	font-size: 2rem;
+	color: #c7c7cc;
+	padding-right: 1rem;
+	float: right;
+}
+.list li hr{
+	color: #ddd;
+	margin-top: 1.2rem;
+}
+.fetch{
+	height: 4rem;
+	padding-top: 2rem;
+}
+.fetch a{
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 4rem;
+	color: #fff;
+	font-size: 1.4rem;
+	text-decoration: none;
+	height: 4rem;
+	background-color: #f44444;
+}

@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	font-size: 62.5%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-size: 1.4rem;*/
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+.container{
+	height: 43.1rem;
+	width: 78%;
+    background: #fefefe;
+    margin: 12% auto;
+    border: 1px solid #d5dce5;
+	/*background-color: red;*/
+}
+.container h3{
+	font-size: 1.6rem;
+	/*line-height: 3rem;*/
+	letter-spacing: 0.2rem;
+	color: #4d5e73;
+	padding: 2.5rem 3rem 1.5rem 3rem;
+	/*background-color: red;*/
+}
+.user{
+	height: 22rem;
+	width: 80%;
+	/*background-color: red;*/
+	margin: 0 auto;
+}
+.user .username, .user .userpass{
+	display: block;
+	/*font-size: 1.6rem;*/
+	width: 100%;
+	padding: 1.4rem 0;
+	border: 1px solid #d5dce5;
+	margin-bottom: 20px;
+    font-weight: normal;
+    text-indent: 23px;
+    outline: 0;
+    font-size: 1.25em;
+    border-radius: 3px;
+	background-color: #fff;
+}
+.user .username::-webkit-input-placeholder { /* WebKit browsers */
+    color:#c5c5c5;
+    font-size:1.5rem;
+    line-height: 4.7rem;
+    height: 4.7rem;
+}
+.user .userpass::-webkit-input-placeholder { /* WebKit browsers */
+    color:#c5c5c5;
+    font-size:1.5rem;
+    line-height: 4.7rem;
+    height: 4.7rem;
+}
+.null{
+	height: 1.2rem;
+	margin-top: 1rem;
+}
+.null i, .getPhoneNull i{
+	display:block;
+	float: left;
+	/*margin: 1.2rem 0 1rem 0;*/
+	width: 1.2rem;
+	height: 1.2rem;
+	background: url("../images/x.png") no-repeat;
+	background-position:-4.7rem 0 ;
+	border-radius: 100%;
+	background-color: red;
+}
+.null p, .getPhoneNull p{
+	padding-left: 1rem;	
+	padding-bottom: 1rem;
+	/*padding-top: 0;*/
+	display: inline-block;
+}
+.carry{
+	height: 3rem;
+	/*width: 90%;*/
+	/*margin: 0 auto;*/
+	/*background-color: red;*/
+}
+.carry .click{
+	/*padding: 0.2rem;*/
+	width: 1rem;
+	height: 1rem;
+	border: 0.1rem solid #ccc;
+}
+.carry .again{
+	display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #4d5e73;
+    padding-left: 1rem;
+    font-size: 1em;
+}
+.carry .forget{
+	display: inline-block;
+	float: right;
+	color: #4d5e73;
+    /*text-decoration: none;*/
+}
+.login{
+	    background: #c90a16;
+	height: 4.4rem;
+	    border: solid 1px #c90000;
+}
+.login a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	text-align: center;
+	line-height: 4.4rem;
+	color: #fff;
+	border-radius: 3px;
+	/*margin-top: 2rem;*/
+    font-size: 1.5rem;
+        box-shadow: 0 0 3px #fff inset;
+}
+.loginCsdn{
+	border-top: 0.1rem solid #d5dce5;	
+
+}
+.loginCsdnContainer{
+	width: 80%;
+	height: 11rem;
+	margin: 5% auto;
+	/*background-color: yellow;*/
+	/*background-color: red;*/
+}
+.loginCsdnContainer .loginCsdnContainerHead{
+	padding-top: 1rem;
+    font-size: 1.083em;
+    color: #666;
+    margin-bottom: 1.1rem;
+}
+.loginThird{
+	width: 100%;
+}
+.loginThird ul{
+	list-style: none;
+}
+.loginThird li a{
+	display: block;
+	float: left;
+	margin-right: 1rem;
+	width: 2.65rem;
+	height: 2.65rem;
+	background: url("../images/login.png");
+	/*background-color: red;*/
+}
+.loginThird li .loginThirdboke{
+	background-position: -3.1rem 0;
+}
+.loginThird li .loginThirdBai{
+	background-position: -6.2rem 0;
+}
+.loginThird li .loginThirdOsc{
+	background-position: -9.3rem 0;
+}
+.loginThird li .loginThirdSign{
+	background-position: -12.4rem 0;
+}
+.loginCsdnContainer .loginCsdnContainerRegister{
+	font-size: 1.083rem;
+    color: #666;
+    padding-top: 4.5rem;
+    margin-bottom: 1.1rem;
+}
+.loginCsdnContainer .loginCsdnContainerRegister a{
+	padding-left: 1rem;
+	    color: #428bca;
+    text-decoration: none;
+}
+.abstract{
+	width: 100%;
+	height: 5rem;
+	/*height: 100%;*/
+	padding: 1rem 0;
+	border-top: 0.1rem solid #d5dce5;
+	border-bottom: 0.1rem solid #d5dce5;
+}
+.abstract ul{
+	width: 100%;
+	/*border: 0.1rem solid #d5dce5;*/
+}
+.abstract li{
+	float: left;
+	list-style: none;
+	font-size: 1.4rem;
+	font-family: 'microsoft yahei';
+    text-decoration: none;
+    display: block;
+    height: 2rem;
+    float: left;
+    margin-bottom: 1rem;
+}
+.abstract li a{
+	color: #333; 
+	text-decoration: none;
+	padding: 0 1rem 0 0.5rem;
+	border-right: 0.1rem solid #d5dce5;
+}

@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+html,body{
+	width: 100%;
+	font-size: 62.5%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-size: 1.4rem;*/
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+.login{
+	height: 4rem;
+}
+.login a{
+	float: right;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	font-size: 1.6rem;
+	color: #4374e0;
+}
+.welcome{
+	width: 90%;
+	/*height: 10rem;*/
+	margin: 0 auto;
+	/*background-color: red;*/
+}
+.welcomeHeadline p{
+	font-size: 2.5rem;
+}
+.register{
+	padding-top: 3rem;
+}
+.clearfix::after{
+	display: block;
+	clear: both;
+	height: 0;
+	content: "";
+}
+.register li{
+	float: left;
+	font-size: 1.4rem;
+	color: #999;
+	padding-right: 1rem;
+	list-style: none;
+}
+.register li span{
+	display: inline-block;
+	width:2rem;
+	height: 2rem;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-right: 0.5rem;
+	background-color: #ddd;
+	color: #fff;
+	border-radius: 100%;
+}
+.register li strong{
+	display: inline-block;
+	margin-left: 1rem;
+	margin-top: 1rem;
+	/*margin-bottom: 1rem;*/
+	/*width: 20%;*/
+	width: 3rem;
+	height: 0.1rem;
+	line-height: 0.1rem;
+	text-align: center;
+	background-color: #ddd;
+}
+.content{
+	height: 16rem;
+}
+.aim p{
+	font-size: 1.6rem;
+	color: #4f4f4f;
+	padding-top: 3rem;
+}
+.aimCoder{
+	float: left;
+	/*background-size: 100%;*/
+	width: 13.2rem;
+	height: 13.2rem;
+	margin-top: 2rem;
+	border: 0.1rem solid #ccc;
+    box-shadow: 0.4rem 0.4rem 0 0 rgba(204,204,204,0.5);
+    padding: 1.4rem;
+
+}
+.aimCoder img{
+	display: block;
+	float: left;
+	width: 13.2rem;
+	height: 13.2rem;
+}
+.aimCoderSpan{
+	float: left;
+}
+.aim span{
+	display: block;
+	float: left;
+	margin-top: 2rem;
+	height: 16rem;
+	line-height: 16rem;
+	padding-left: 1rem;
+	/*padding-bottom: 14rem;*/
+	/*text-align:left;*/
+	font-size: 1.6rem;
+}
+.aimNext{
+	margin-top: 5rem;
+}
+.aimNext input{
+	width: 100%;
+	height: 4.8rem;
+	    background: #fafafa;
+    border: 0.1rem solid #ddd;
+    box-shadow: inset 0 0.1rem 0.1rem 0 #ddd;
+    border-radius: 0.4rem;
+}
+.aimNext .aim_next::-webkit-input-placeholder { /* WebKit browsers */
+    color:#c5c5c5;
+    font-size:1.8rem;
+    line-height: 4.8rem;
+    height: 4.8rem;
+}
+.aimCarry a{
+	display: block;
+	margin-top: 3.2rem;
+	line-height: 4rem;
+	text-align: center;
+	font-size: 2.4rem;
+	text-decoration: none;
+	width: 100%;
+	height: 4rem;
+	background-color: #c92027;
+	color: #fff;
+	border-radius: 0.4rem;
+	box-shadow: 0 0.2rem 0 0 #ccc;
+}
+.aimRead{
+	margin-top: 2.5rem;
+	margin-bottom: 4rem;
+}
+.aimRead span{
+	display: inline-block;
+	width: 2rem;
+	background:url("../images/false.png");
+	background-size: 2rem 2rem;
+	background-repeat: no-repeat;
+	background-position:  0 0;
+	height: 2rem;
+	border-radius: 100%;
+	background-color: #ddd;
+}
+.aimRead span:hover{
+	background-color: red;
+}
+.aimRead p{
+	display: inline-block;
+	font-size: 1.6rem;
+	height: 2rem;
+	line-height: 2rem;
+}

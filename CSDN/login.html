@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录页面</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<link rel="stylesheet" href="./css/login.css">
+
+</head>
+<body>
+	<div id="main">
+		<div class="container">
+			<h3>账号登录</h3>
+			<div class="user">
+				<input type="text" class="username" placeholder="请输入用户名/邮箱/手机号" v-model="userName">
+				<div>
+					<input type="password" class="userpass" placeholder="请输入密码" v-model="userPass">
+				</div>
+				<div class="null" v-show="isShow"><i></i><p>不能为空</p></div>
+				<div class="carry">
+					<!-- <input type="value" class="click"> -->
+					<span class="again">下次自动登录</span>
+					<span class="forget">忘记密码</span>
+
+				</div>
+				<div class="login">
+					<a @click="getData">登录</a>
+				</div>
+			</div>
+			<div class="loginCsdn">
+				<div class="loginCsdnContainer">
+					<p class="loginCsdnContainerHead">第三方账号登录</p>	
+					<div class="loginThird">
+						<ul>
+							<li><a href=""></a></li>
+							<li><a href="" class="loginThirdboke"></a></li>
+							<li><a href="" class="loginThirdBai"></a></li>
+							<li><a href="" class="loginThirdOsc"></a></li>
+							<li><a href="" class="loginThirdSign"></a></li>
+						</ul>
+					</div>
+					   <div>
+					<p class="loginCsdnContainerRegister">还没有CSDN帐号？
+						<a v-for="item in list" v-bind:href="'register.html?id='+item.id">{{item.list}}</a>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="abstract">
+			<ul><li><a href="">公司简介</a></li></ul>
+			<ul><li><a href="">招贤纳士</a></li></ul>
+			<ul><li><a href="">广告服务</a></li></ul>
+			<ul><li><a href="">联系方式</a></li></ul>
+			<ul><li><a href="">版权声明</a></li></ul>
+			<ul><li><a href="">法律顾问</a></li></ul>
+			<ul><li><a href="">问题报告</a></li></ul>
+			<ul><li><a href="">合作伙伴</a></li></ul>
+			<ul><li><a href="">论坛反馈</a></li></ul>
+
+		</div>
+	</div>
+	<div class="fotter">
+		
+	</div>
+	<script src="./js/login.js"></script>
+</body>
+</html>

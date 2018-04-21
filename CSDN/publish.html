@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" src="./ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="./ueditor/ueditor.all.min.js"></script>
+	<script type="text/javascript" src="./ueditor/lang/zh-cn/zh-cn.js"></script>
+	<link rel="stylesheet" href="./css/publish.css">
+</head>
+<body>
+	<div id="main">
+		<div class="head">
+			<div class="head-container">
+				<div class="head_logo">
+					<img src="./images/publish.png" alt="">
+				</div>
+				<div class="head_right">
+					<div class="write">
+						<a href="">写博客</a>
+					</div>
+					<div class="head_person">
+						<p>用户名</p>
+
+						<img src="./images/head.jpg" alt="">
+					</div>
+					<div class="fetch">
+						<a href="">推出</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content-list">
+				<ul>
+					<li class="list-content" style="background:white;color:grey" >内容</li>
+					<li class="list-title"><a href="./title-management.html">文章管理</a></li>
+					<li>专栏管理</li>
+				</ul>
+			</div>
+			<div class="write-title">
+				<p><input v-model="title" type="text" name="title" placeholder="请输入文章标题"></p>
+				<script id="container" name="content" type="text/plain"></script>
+				<p>
+					<select v-model="class_id">
+					<option value="5" selected="selected">日记</option>
+					<option value="4">it</option>
+				</select>
+				</p>
+				<button @click="issue">发布</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+    	var editor = new Vue({
+    		el: "#main",
+    		data: {
+    			title: "",
+    			class_id: ""
+    		},
+    		mounted: function(){
+    			var ue = UE.getEditor('container');
+    		},
+    		methods: {
+    			getUeditorContent: function(){
+    				return UE.getEditor('container').getContent()
+    			},
+    			issue: function(){
+    				$.ajax({
+    					"url": "http://blog.com/api/blog/doAdd",
+    					"type": "post",
+    					"dataType": "json",
+    					"data": {
+    						"user_id": '36',
+    						"title": this.title,
+    						"content": this.getUeditorContent(),
+    						"classify_id": this.class_id,
+    					},
+    					success: function(res){
+    						if(res.error_code == 0){
+    							alert("发布成功即将跳转。。。。。。");
+    							window.location.href="./vue-blog-list.html"
+    						}else {
+    							alert(res.message);
+    						}
+    					}
+    				})
+    			}
+    		}
+    	})
+    </script>
+</body>
+</html>

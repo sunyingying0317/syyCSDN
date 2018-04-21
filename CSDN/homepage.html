@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>CSDN首页</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="./js/swiper-4.2.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/swiper-4.2.2.min.css">
+	<link rel="stylesheet" href="./css/homepage.css">
+</head>
+<body>
+	<div id="main">
+		<div class="csdn">
+			<div class="csdnNav"></div>
+			<div class="csdnLogo"><img src="./images/logo.png" alt=""></div>
+			<div class="csdnRight">
+				<div class="csdnSearch"><a href=""><img src="./images/sousuo.png" alt=""></a></div>
+				<div class="csdnLogin"><a v-bind:href="'login.html?id='+blog.id">登录</a></div>
+			</div>
+		</div>
+		<div class="nullDiv"></div>
+		<div class="bar">
+			<ul class="clearfix">
+				<li><a href="">推荐</a></li>
+				<li><a href="">最新文章</a></li>
+				<li><a href="">关注</a></li>
+				<li><a href="">咨询</a></li>
+				<li><a href="">人工智能</a></li>
+				<li><a href="">云计算</a></li>
+				<li><a href="">区块链</a></li>
+				<li><a href="">数据库</a></li>
+				<li><a href="">程序人生</a></li>
+				<li><a href="">游戏开发</a></li>
+				<li><a href="">研发管理</a></li>
+
+			</ul>
+		</div>
+		<div class="photo">
+			
+			<div class="swiper-container">
+			  <div class="swiper-wrapper clearfix">
+			    <a href="#" class="swiper-slide" v-for="item in banner"><img :src="item.img"></a>
+			  </div>
+			</div>	
+		</div>
+		<div class="detials">
+			<ul class="clearfix">
+				
+					<li v-for="item in blog">
+						<p class="detialsHead"><a href="details.html">{{item.title}}</a></p>
+						<p class="detialsOrder">
+							<a :href="'details.html?id='+item.id" class="detialsOrderHead">程序人生</a>
+							<i>{{item.author}}</i>
+							<strong>{{item.read_num}}阅读</strong>
+							<span>{{item.date}}</span>
+							<a href="" class="detialsOrderTime">X</a>
+						</p>
+					</li>
+			</ul>
+		</div>
+	</div>
+	<script src="./js/homepage.js"></script>
+</body>
+</html>

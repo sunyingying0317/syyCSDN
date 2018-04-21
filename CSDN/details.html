@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>CSDN</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<link rel="stylesheet" href="./css/details.css">
+</head>
+<body>
+	<div id="main">
+		<div class="csdn">
+			<div class="csdnNav"><a v-bind:href="'homepage.html?id='+list.id"><img src="./images/heng.png" alt=""></a></div>
+			<div class="csdnLogo"><img src="./images/boke.png" alt=""></div>
+			<div class="csdnRight">
+				<div class="csdnRightSearch"><a href=""><img src="./images/sousuo.png" alt=""></a></div>
+				<p><a href="">登录</a></p>
+			</div>
+		</div>
+		<div class="nullContent"></div>
+		<div class="order">
+			<div class="orderContent bor"> 
+				<div class="orderContentPhoto"><img src="./images/order.jpg" alt=""></div>
+				<p>{{list.author_name}}<a href="">关注</a></p>
+			</div>
+			<div class="details">
+				<div class="detailsTitle">
+					<h1>{{list.title}}</h1>
+					<div class="detailsTimer">
+						<span>转载</span>
+						<span>{{list.date}}</span>
+						<span>阅读 {{list.read_num}}</span>						
+					</div>
+					<div class="detailsContent">
+						<p class="detailsContentHead">点击上方“<span>程序人生</span>”，选择“置顶公众号”</p>
+						<p class="detailsContentHead">第一时间关注程序猿（媛）身边的故事</p>
+						<p class="detailsContentHead"></p>
+						<p class="detailsContentImage">
+							<img src="./images/p.png" alt="" width="100%">
+						</p>
+						<div class="detailsContentEssay">
+							<p class="detailsContentArticle"><span>之所以提这个话题，跟前两天在微信群里的讨论有关，年后本该是跳槽、找工作的高峰月份，各公司面试邀约应该很多，但是听群里的反馈却是不太容易。从行业发展角度看，移动互联网连续火爆数年，已逐步走向稳定；从国家发展形势看，从去年开始，整个国家经济形势不景气，不只失业率增多，好多移动互联网公司裁员、倒闭；从程序员职业角度看，现今「挨踢」培训机构屡见不鲜，大都打着包学包会包分配，三俩月速成的口号忽悠人，导致很多学员没有打牢基础，就匆忙走上岗位，而且培训机构过分鼓吹使得学员们没有真正认清自身实际，没有正确定位！</span>
+							<span>建议大家这段时间不要裸辞，边工作，边寻找机会才是最好的选择。「裸辞」倘若一时找不到工作可能会导致心慌，没有安全感，甚至会产生「自我怀疑」和「自我否定」！如果在职场暂时迷茫也不要心慌，因为只有经历过了痛苦和绝望之后，才能够「浴火重生」，找到方向。</span>
+							<strong>从本质上区分，一个是被动，一个是主动</strong>
+							<span>由于近几年来移动互联网行业实在火爆，程序员这条路已经由10年前的「羊肠小道」，修成了「康庄大道」，跟高速公路似的，但是还是挤，拥挤的跟北京早晚高峰的地铁似的，涌入的人越来越多，感觉门槛似乎很低。很多人看准了计算机行业工资高，好就业，转行当程序员。其实不然，一个行业健康的发展是因为有很多有兴趣，有爱好的人涌入，这部分人由于兴趣和爱好，喜欢钻研，想要更深入的去了解底层知识和原理，所以容易提高，这就是优秀的程序员，而大部分人是被现实所逼迫，从而选择了一个职业，逼迫往往而导致被动，时间久了就会变得平庸。中国有句俗语叫「心随我动」，一旦从事了这个行业，时间久了，差距就会慢慢拉开，所以优秀和普通从根本上就有差别。</span>
+							</p>
+							<div class="detailsContentRead">
+								<a href="">阅读全文</a>
+							</div>
+							<p class="detailsContentReport"><a href="" class="detailsContentReportPhpto"></a><a href="">举报</a></p>
+						</div>
+						<div class="detailsContentBoke">
+							<div class="orderContent"> 
+							<div class="orderContentPhoto"><img src="./images/order.jpg" alt=""></div>
+							<p>CSDN程序人生</p>
+							</div>
+							<div class="orderContentMore">
+								<span class="orderContentHead">访问量</span>
+								<span class="orderContentNum">53万+</span>
+								<span class="orderContentHead">原创</span>
+								<span class="orderContentNum">110</span>
+								<span class="orderMore"><a href="">博主更多文章&gt</a></span>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="article" v-for="item in list">
+				<h1>{{relata[0].title}}</h1>
+				<p>
+					<span class="articleHead">kl28978113</span>
+					<span class="articleHead">{{relata[0].read_num}}次阅读</span>
+					<span>{{relata[0].date}}</span>	
+				</p>
+			</div>
+			<div class="article">
+				<h1>论「能写代码」的程序员与「会写代码」的程序员</h1>
+				<p>
+					<span class="articleHead">kl28978113</span>
+					<span class="articleHead">22次阅读</span>
+					<span>2018年03月19日 13:00</span>	
+				</p>
+			</div>
+			<div class="article">
+				<a href="">更多相关文章</a>
+			</div>
+			<div class="wonder">
+				<div class="wonderContent"> 
+					<div>
+						<img src="./images/timg.jpg" alt="">
+					</div>
+					<p class="wonderCSDN">CSDN</p>
+					<p class="wonderful">CSDN精彩内容推荐</p>
+					<p><a href="">查看熊账号</a></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="collect">
+			<div class="collect_list">点赞</div>
+			<div class="collect_list">评论</div>
+			<div class="collect_list" v-on:click="getCollect()" ref="collect">收藏</div>
+		</div>
+	</div>
+	
+	<script src="./js/details.js"></script>
+</body>
+</html>

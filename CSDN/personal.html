@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>个人中心</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<link rel="stylesheet" href="./css/personal.css">
+</head>
+<body>
+	<div id="main">
+		<div class="head">
+			<div class="head_left"><a href="">&lt;</a></div>
+			<div class="head_content">
+				<img src="./images/person.png" alt="">
+			</div>
+			<div class="head_right">
+				<div class="head_search"><img src="./images/sousuo.png" alt=""></div>
+				<div class="head_logo">
+					<img src="./images/head.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="personal">
+				<i><img src="./images/head.jpg" alt=""></i>
+				<div class="personal_con">
+					<h3>qq_41998282</h3>
+					<p><span>关注</span>0<span>粉丝</span>0</p>
+				</div>
+			</div>
+			<div class="download">
+					
+			</div>
+			<div class="list">
+				<ul class="clearfix">
+					<li><p>我的博客<span>&gt;</span></p><hr></li>
+					<li><a href=""><p>我的收藏<span>&gt;</span></p></a><hr></li>
+					<li><p>我的下载<span>&gt;</span></p></li>
+				</ul>
+			</div>
+			<div class="fetch">
+				<a v-bind:href="'homepage.html?='+item.id">退出登录</a>
+			</div>
+		</div>
+	</div>
+
+	<script src="./js/personal.js"></script>
+</body>
+</html>
