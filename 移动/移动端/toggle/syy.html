@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+    <style type="text/css">
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .hide-div{
+            height: 500px;
+            width: 200px;
+            background-color: red;
+        }
+        .select{
+            background-color: pink;
+            color: yellow;
+            border:3px solid #000;
+        }
+        .head{
+            height: 200px;
+            background-color: yellow;
+        }
+        .header{
+            width: 200px;
+            height: 160px;
+            margin:0 auto;
+            background-color: #fff;
+            border:3px solid red;
+        }
+        .bar{
+            height: 1px;
+            width: 300px;
+            margin: 0 auto;margin-top: 100px;
+            z-index: 2;
+            border-bottom:3px solid red;
+        }
+        .content{
+            height: 200px;
+            background: pink;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     <button class="show">show</button>
+    <button class="hide">hide</button>
+    <button class="toggle">toggle</button>
+    <button class="slideDown">slideDown</button>
+    <button class="add-bg-color">添加背景颜色</button>
+    <button class="remove-bg-color">移除背景颜色</button>
+    <div class="hide-div"> sdsdadsada     
+    </div>
+    <div class="head">
+        <div class="header"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="content"></div>
+    <script type="text/javascript">
+    $(function(){
+        // $(".hide").click(function(){
+        //     $(".hide-div").hide();（字和框框一起变  鼠标点击代码）
+        // })
+        // $(".show").click(function(){
+        //     $(".hide-div").show();
+        // })
+        // $(".toggle").click(function(){
+        //     $(".hide-div").toggle();  
+        // })
+        // $(".slideDown").click(function(){
+        //     $(".slideDown").slideDown();
+        // })
+        // $(".add-bg-color").click(function(){
+        //     // $(".hide-div").css({"background":"pink","color":"red"});
+        //     $(".hide-div").addClass("select");       
+        //     $(this).css("background":"red")
+        // })
+        // $(".remove-bg-color").click(function(){
+        //     $("hide-div").removeClass("select");
+        // })
+        $("类").click(function(){
+            $("类").removeClass("css")
+            $(this).addClass("类")
+        })
+        $("button").click(function({
+            $("botton").removeClass("select")
+                $(this）.addClass("select")
+        })
+        $("button").click(function(){
+            // $("button").removeClass("select");
+            //     $(this).addClass("select")
+            $(this).addClass("select").siblings().removeClass("select")
+        })
+        $("add-bg-color").click(function(){
+            $("header").addClass("header1");
+        })
+     })
+        // $(function(){
+        //     var btn = $(".btn");
+        //     console.log(btn);
+        //     btn.click(function(){
+        //         alert(111);
+        //     })
+        // })
+    </script>
+</body>
+</html>

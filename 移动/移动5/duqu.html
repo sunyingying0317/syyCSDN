@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+</head>
+<body>
+	
+	<script>
+
+	function Person (name,age,job){
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		this.sayName = new Function("alert(this.name)");
+	}
+	var person1 = new Person("Na",39, "software engineer");
+	var person2 = new Person("naw",20,"s");
+
+	alert(person1.sayName == person2.sayName);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>批量同志患者</title>
+	<script src="./js/jquery-3.2.0.min.js"></script>
+	<style>
+	    html,body{
+    		font-size: 62.5%;
+    		font-family: PingFangSC-Regular;
+    	}
+		html,body,p,span,pre,strong,img,a{
+			margin: 0;
+			padding: 0;
+		}
+		.top{
+			height: 4.4rem;
+			background-color:#f9f9f9;
+		}
+		.top p{
+			display: inline-block;
+			padding-top: 1.5rem;
+			padding-left: 1.6rem;
+			font-size:1.4rem;
+			color:#666666;
+			letter-spacing:0.072rem;
+			height: 1.4rem;
+			line-height:1.4rem;
+			text-align:left;
+		}
+		.top span{
+			color: blue;
+			overflow: hidden;
+		}
+		.top .top-right{
+			float: right;
+			padding-right: 1.6rem;
+		}
+		.content{
+			height: 7.3rem;
+			margin: 1.5rem;
+			border-bottom: 1px solid #f9f9f9;
+		}
+		.content-left{
+			position: relative;	
+		}
+		.content-left img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4.3rem;
+			height: 4.3rem;
+			border-radius: 100%;
+		}
+		.content-right{
+			padding-left: 5.7rem;
+		}
+		.content-right p{
+			font-size:1.6rem;
+			color:#323232;
+			letter-spacing:-0.04rem;
+			line-height:1.6rem;
+			text-align:justify;
+		}
+		.content-right p span{
+			color:#666666;
+			/*padding-left: 5.7rem;*/
+			padding-left: 1rem;
+			text-align:left;
+		}
+		.content-right a{
+			display: inline-block;
+			width: 1.6rem;
+			height: 1.6rem;
+			line-height: 1.6rem;
+			float: right;
+		}	
+		.no-selected{
+			background-image: url("./images/null.png");
+			background-size: 100% 100%;
+		}
+			.selected{
+			background-image: url("./images/xuan.png");
+			background-size: 100% 100%;
+		}
+		.content-right strong{
+			font-size:1.3rem;
+			display: block;
+			color:#666666;
+			letter-spacing:0;
+			padding-top: 0.3rem;
+			text-align:justify;
+		}
+		.clearfix::after{
+			display: block;
+			content: "";
+			clear: both;
+			height: 0;
+		}
+		.content-right ul{
+			margin-left: -3.3rem;
+		}
+		.content-right .right-first{
+			margin-right: 1rem;		
+		}
+		.content-right li{			
+			padding: 0.3rem 0.5rem;
+			list-style: none;
+			border-radius:2px;
+			float: left;
+			font-size:13px;
+			color:#bcbcbc;
+			line-height:13px;
+			text-align:left;
+			background-color: #f9f9f9;
+		}
+		.next-btn {
+            width: 60%;
+            display: inline-block;
+            background:#1c91e0;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .select-all {
+            font-size: 1.5rem;
+            display: inline-block;
+            width: 30%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            color: #000;
+        }
+        .all-btn {
+            width: 1.6rem;
+            height: 1.6rem;
+            display: inline-block;
+            vertical-align: -0.4rem;
+        }
+		.all-selected{
+			background-image: url("./images/xuan.png");
+			background-size: 100% 100%;
+		}
+		.all-noselected{
+			background-image: url("./images/null.png");
+			background-size: 100% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="bar">
+		<div class="top">
+			<p class="top-left">
+				已选<span>2</span>人
+			</p>
+			<p class="top-right">
+				关闭管理
+			</p>
+		</div>
+		<div class="contenter">
+			<div class="content">
+				<div class="content-left">
+					<img src="./images/her.png" alt="">
+				</div>
+				<div class="content-right">
+					<p>天小石<span>感冒</span><a href="#" class="select-btn no-selected"></a></p>
+					<p><strong>男 27岁</strong></p>
+					<ul class="clearfix">
+						<li class="right-first">已支付</li>
+						<li>黑龙江/哈尔滨</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content-left">
+					<img src="./images/her.png" alt="">
+				</div>
+				<div class="content-right">
+					<p>买哈卖的内...<span>腮腺炎发言</span><a href="#" class="select-btn no-selected"></a></p>
+					<p><strong>男 40岁</strong></p>
+					<ul class="clearfix">
+						<li>新疆／比其肯布尔古斯台</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+					<div class="content-left">
+						<img src="./images/her.png" alt="">
+					</div>
+					<div class="content-right">
+						<p>灿烂的微笑<span>三体综合炎...</span><a href="#" class="select-btn no-selected"></a></p>
+						<p><strong>女 20岁</strong></p>
+						<ul class="clearfix">
+							<li class="right-first">已支付</li>
+							<li>甘肃／那然色布斯台音布拉格</li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom clearfix">
+        <div class="next-btn">下一步</div>
+        <div class="select-all">全选 <a class="all-btn all-noselected"></a></div>
+    </div>
+</body>
+	<script>
+		$(function(){
+			$(".select-all").click(function(){
+				if($(".all-btn").hasClass("all-noselected")){
+					$(".all-btn").addClass("all-selected").removeClass("all-noselected");
+					$(".select-btn").addClass("selected").removeClass("no-selected");
+
+				}else{
+					$(".all-btn").addClass("all-noselected").removeClass("all-selected");
+					$(".select-btn").addClass("no-selected").removeClass("selected");
+				}
+			});
+			$(".select-all")
+			console.log($(".content"));
+			$(".content").click(function(){
+				console.log($(this).find(".select-btn"));
+            	$(this).find(".select-btn").toggleClass("selected");
+           		var selectedNum = $(".selected").length;
+           		console.log(selectedNum);
+                var selectedBtnNum = $(".select-btn").length;
+                console.log(selectedNum);
+                if(selectedNum == selectedBtnNum) {
+                    $(".all-btn").addClass("all-selected").removeClass("all-noselected");
+                }else {
+                    $(".all-btn").addClass("all-noselected").removeClass("all-selected");
+                }
+            })
+            $(".content").click(function(){
+            	$(this).find()
+            })
+		})
+	</script>
+</html>

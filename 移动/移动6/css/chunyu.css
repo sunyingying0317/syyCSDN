@@ -1,0 +1,242 @@
+html,body,img,ul,li,p,a,b,span,strong{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	font-family: PingFangSC-Light;
+	font-size: 62.5%;
+}
+a{
+	text-decoration: none;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+.head{
+	height: 5rem;
+}
+.head p{
+	padding: 1.5rem 0 0 2.2rem;
+	font-size: 1.5rem;
+	color: #323232;
+}
+.question{
+	height: 7.9rem;
+}
+.question li{
+	padding: 0.3rem 0;
+}
+.question li span{
+	color: blue;
+	padding: 0.8rem 1rem 0 2rem; 
+	/*padding-right: 1rem;*/
+	font-size: 2rem;
+}
+.question li p{
+	opacity: 0.8;
+	font-size: 1.5rem;
+	color: #323232;
+	letter-spacing: 0;
+}
+.question li .question-top{
+	padding-top:1.3rem; 
+}
+.power{
+	height: 4rem;
+}
+.power p{
+	padding: 1rem 1.5rem; 
+	opacity: 0.8;
+	font-size: 1.4rem;
+	color: #666666;
+	letter-spacing: 0;
+}
+.skill{
+	height: 12.2rem;
+}
+.skill li{
+	float: left;
+	width: 25%;
+	height: 6rem;
+	list-style: none;
+	border-top: 0.1rem solid #E7E7E7; 
+}
+.skill li .no-skill{
+	border: none;
+}
+.skill li a{
+	display: block;
+	margin: 1rem 0;
+	border-right: 0.1rem solid #E7E7E7;
+}
+.skill li a p{
+	text-align: center;
+}
+.skill li a .skill-top{
+	font-size: 1.8rem;
+	color: #1B91E0;
+	letter-spacing: -0.043rem;
+}
+.skill li a .skill-bottom{
+	font-size: 1.2rem;
+	color: #999999;
+	letter-spacing: -0.029rem;
+}
+.null{
+	background-color: #E7E7E7;
+	height: 1rem;
+}
+.example{
+	height: 5rem;
+}
+.example ul{
+	padding: 1.2rem 1.5rem 1.3rem 1.5rem;
+}
+.example li{
+	list-style: none;
+	float: left;
+}
+.example li{
+	/*width: 17.2rem;*/
+	height:2.5rem;
+	width: 50%;
+	text-align: center;
+}
+.example li .example-top{
+	font-size: 1.5rem;
+	color: #1B91E0;
+	border: 0.1rem solid #1B91E0;
+	letter-spacing: -0.36px;
+}
+.example li .example-bottom{
+	font-size: 1.5rem;
+	background: #1B91E0;
+	border: 0.1rem solid #1B91E0;
+	border-radius: 0.3rem;
+}
+.select{
+	font-size: 1.5rem;
+	background: #1B91E0;
+	border: 0.1rem solid #1B91E0;
+	border-radius: 0.3rem;
+}
+.content{
+	height: 51rem;
+}
+.content li{
+	border-bottom: 0.1rem solid #E7E7E7;
+	height: 16.9rem;
+}
+.content li .content-fi p{
+	padding-left: 1.5rem;
+}
+.content li .content-top{
+	padding-top: 1.6rem;
+	font-size: 1.7rem;
+	color: #323232;
+	letter-spacing: 0;
+}
+.content li p span{
+	color: #1B91E0;
+	letter-spacing: 0;
+	line-height: 2.4rem;
+}
+.content li .content-content{
+	padding-top: 0.8rem;
+	font-size: 1.5rem;
+	color: #999999;
+	letter-spacing: 0;
+}
+.content-bt{
+	position: relative;
+}
+.content-bt img{
+	position: absolute;
+	top: 0;
+	left: 1.5rem;
+	width: 4rem;
+	height: 4rem;
+	padding-top: 1rem;
+	border-radius: 100%;
+}
+.content-tp{
+	height: 9.9rem;
+	margin-left: 1.5rem;
+	border-bottom: 0.1rem solid #E7E7E7;
+}
+.content-bt p, .content-bt a{
+	font-size: 1.2rem;
+	padding-left: 6.2rem;
+}
+.content-bt p{
+	padding-top: 1.2rem;
+	color: #323232;
+}
+.content-bt p strong{
+	padding-left:1rem; 
+	color: #999;	
+}
+.content-bt a, .content-bt p span{
+	color: #999;
+}
+.content li .content-question{
+	padding-top: 1.5rem;
+	font-size: 1.7rem;
+	color: #999999;
+	letter-spacing: 0;
+}
+.content li .content-question span{
+	color: #141414;
+	letter-spacing: 0;
+	line-height: 2.4rem;
+}
+.content li .content-question i{
+	display: inline-block;
+	font-size: 1.1rem;
+	color: #1B91E0;
+	border: 0.1rem solid #1B91E0;
+	text-align: center;
+	margin-right: 1rem;
+	width: 4.4rem;
+	height: 1.6rem;
+}
+.assist{
+	position: relative;
+	height: 6.5rem;
+}
+.assist p{
+	display: inline-block;
+	font-size: 1.4rem;
+}
+.assist .assist-left{
+	color: #999;
+	padding: 2.4rem 0 0 1.5rem;
+}
+.assist .photo-top{
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
+	background: url(../images/top.png) no-repeat;
+	background-size: 1.7rem 1.7rem;
+}
+.assist .photo-bottom{
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
+	background: url(../images/bottom.png) no-repeat;
+	background-size: 1.7rem 1.7rem;
+}
+.assist .assist-right{
+	padding-left: 10%;
+	content: #666;
+	width: 15%;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}

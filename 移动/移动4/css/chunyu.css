@@ -1,0 +1,268 @@
+html,body{
+	font-size: 62.5%;
+}
+html,body,p,a,h1,h2,ul,li,img,input,span{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #f4f4f4;
+}
+a{
+	text-decoration: none;
+}
+.clearfix::after{
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+.quiz{
+	position: relative;
+	background-color: #fff;
+	height: 6.7rem;
+	/*background-color: red;*/
+}
+.quiz .quiz-content{
+	/*display: block;*/
+	/*margin: 0 auto;*/
+	position: absolute;
+	left: 37%;
+	top: 2rem;
+	width: 10.5rem;
+	height: 2.4rem;
+}
+.quiz .quiz-right{
+	position: absolute;
+	right: 2.4rem;
+	top: 2rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	/*background-color: red;*/
+	background-color: #fff;
+
+}
+.search{
+	position: relative;
+	height: 3.4rem;
+	background-color: #fff;
+	border-top: 0.1rem solid #f4f4f4;
+	border-bottom: 0.1rem solid #f4f4f4;
+}
+.search input{
+	display: block;
+	border: none;
+	height: 2.8rem;
+	width: 98%;
+	margin: 0.3rem auto;
+	border-radius: 0.2rem;
+	background-color: #F4F4F4;
+}
+.search a{
+	display: block;
+	position: absolute;
+	right: 2rem;
+	top: 0.6rem;
+	width: 2.4rem;
+	background-color: #fff;
+	height: 2.4rem;
+	background-color: #f4f4f4;
+}
+.ask{
+	position: relative;
+	height: 7.8rem;
+	background-color: #fff;
+	/*background-color: red;*/
+	border-bottom: 0.1rem solid #f4f4f4;
+}
+.ask-left a{
+	position: absolute;
+	left: 1rem;
+	top: 2.2rem;
+	float: left;
+	width: 3.5rem;
+	height: 3.5rem;
+}
+.ask-content{
+	float: left;
+	padding: 1.8rem 0 0 5.5rem;
+}
+.ask-content h1{
+	font-size: 2rem;
+	font-weight: 400;
+	color: #323232;
+}
+.ask-content p{
+	margin-top: 0.2rem;
+	font-size: 1.2rem;
+	color: #999;
+}
+.ask .ask-right{
+	position: absolute;
+	display: block;
+	/*float: left;*/
+	right: 1rem;
+	top: 3rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	/*background-color: #fff;*/
+}
+.doctor{
+	height: 8rem;
+	background-color: #fff;
+}
+.doctor a{
+	display: block;
+	width: 49.8%;	
+	float: left;
+	height: 8rem;
+	background-color: #fff;
+}
+.doctor .doctor-left{
+	border-right: 0.1rem solid #f4f4f4;
+}
+.doctor-content{
+	width: 8rem;
+	height: 7rem;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.doctor-content img{
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	margin: 1rem auto;
+}
+.doctor-content p{
+	padding-top: 0.2rem;
+	text-align: center;
+	color: #666;
+}
+.question{
+	position: relative;
+	margin-top: 1rem;
+	height: 4.1rem;
+	background-color: #fff;
+}
+.question h1{
+	line-height: 4.1rem;
+	padding-left: 1rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #323232;
+}
+.question h1 span{
+	font-size: 1.4rem;
+	float: right;
+	padding-right: 3rem;
+}
+.question h1 a img{
+	position: absolute;
+	top: 0.7rem;
+	left: 7.5rem;
+	display: block;
+	width: 3rem;
+	height: 1.1rem;
+}
+.question h1 i img{
+	position: absolute;
+	right: 1.9rem;
+	top: 1.5rem;
+	width: 0.5rem;
+	height: 1rem;
+}
+.content,{
+	padding: 0.5rem 0;
+	background-color: #fff;
+}
+.content li{
+	list-style: none;
+	background-color: #fff;
+	/*position: relative;*/
+	border-bottom: 0.1rem solid #f4f4f4;
+}
+.content-left{
+	position: relative;
+}
+.content-left img{
+	position: absolute;
+	top: 0;
+	left: 1rem;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+.content-right p{
+	padding-left: 3rem;
+	font-size: 1.4rem;
+	/*height: 1.6rem;*/
+	/*line-height: 1.6rem;*/
+}
+.content-right .content-head{
+	margin: 1rem 0;
+}
+.content-right .content-last{
+	margin: 1rem 0;
+	color: #323232;
+}
+.block-list-wrap{
+	background-color: #fff;
+}
+.block-list-wrap li{
+	/*display: block;*/
+	list-style: none;
+	float: left;
+	/*height: 3.1rem;*/
+	padding: 0.5rem;
+	margin: 1rem;
+	/*color: #666;*/
+	font-size: 100%;
+	background-color: #fff;
+	border: 0.1rem solid #e7e7e7;
+}
+.block-list-wrap li a{
+	color: #666;
+	display: block;
+	font-size: 100%;
+}
+.health{
+	background-color: #fff;
+}
+.health-left{
+	position: relative;
+}
+.health_eg li{
+	border-bottom: 0.1rem solid #e7e7e7;
+}
+.health-left img{
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	width: 9rem;
+	height: 7.5rem;
+}
+.health-right p{
+	padding-left: 11rem;
+	/*padding-top: 2.5rem;*/
+}
+.health-right .health-head{
+	padding-top: 1.5rem;
+}
+.health-right .health-last{
+	padding-top: 3.5rem;
+	padding-bottom: 1.5rem;
+	color: #666;
+}
+.fotter{
+	height: 9rem;
+	background-color: #3a3a3b;
+}
+.fotter{
+	text-align: center;
+}
+.fotter img{
+	/*display: block;*/
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 12.6rem;
+	height: 2.8rem;
+}

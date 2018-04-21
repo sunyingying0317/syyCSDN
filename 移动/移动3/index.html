@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>批量同志患者</title>
+	<script src="./js/jquery-3.2.0.min.js"></script>
+	<title>口腔</title>
+	<style >
+		html,body{
+    		font-size: 62.5%;
+    	}
+    	body{
+    		font-family: PingFangSC-Medium;
+    		background-color: #f9f9f9;
+    	}
+		html,body,p,span,pre,strong,img,a,em,ul,li,hr{
+			margin: 0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		.top{
+			z-index: 999;
+			background-color:#fff;
+		}
+		.top-top a{	
+			display: block;		
+			font-size: 1.6rem;
+			color: #666;
+			padding: 1.5rem 0 0 1.5rem;
+			line-height: 1.6rem;
+		}
+		.top-content{
+			margin: 1.8rem;
+		}
+		.top-content a{
+			font-size: 1.3rem;
+			color: #999;
+			letter-spacing: -0.05rem;
+			line-height: 2rem;
+		}
+		.top .top-bottom{
+			padding-bottom: 2.2rem;
+		}
+		.top-left{
+			margin-left: 4.6rem;
+		}
+		.top-mid{
+			margin-left: 7.4rem;
+		}
+		.top-btm{
+			float: right;
+			margin-right: 2rem;
+		}
+		.top-bottom a{
+			font-size: 1.4rem;
+			color: #666666;
+			line-height: 1.4rem;
+		}
+		.content, .middle, .bottom, .fotter{
+			margin-top: 1rem;
+			background-color: #fff;
+			z-index: 999;
+		}
+/*		.content-top p{
+			display: inline-block;
+			padding: 1.5rem 0 0 1.5rem; 			
+		}
+*//*		.content-top a{
+			font-size: 1.6rem;
+			color: #666666;
+			line-height: 1.6rem;
+		}*/
+/*		.content-top strong a{
+			display: inline-block;
+			float: right;
+			margin-right: 3rem;
+			font-size: 1.3rem;
+			color: #999999;
+			line-height: 1.3rem;
+			padding-left: 10rem;
+		}*/
+
+		.content-top .content-ig{
+			/*float: right;*/
+			background-image: url(./images/1.png);
+			background-size: 0.7rem 1.2rem;
+			background-repeat: no-repeat;
+			background-position: 0 0.1rem;
+			background-color: red;
+			/*width: 0.7rem;
+			height: 1.2rem;*/
+		}
+		.content li{
+			list-style: none;	
+			padding-top: 1.5rem;	
+			border-bottom:0.1rem solid  #F4F4F4;	
+		}
+		.content-left{
+			position: relative;
+		}
+		.content-left img{
+			position: absolute;
+			left: 1.5rem;
+			top: 0.5rem;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+		.content-right{
+			float: left;
+			padding: 0 0.7rem 1.2rem 3.8rem;
+		}
+		.content-right a{
+			font-size: 1.3rem;
+			color: #323232;
+			letter-spacing: -0.03rem;
+			line-height: 2rem;
+		}
+		.content-right span{
+			color: red;
+		}
+		.clearfix::after{
+			display: block;
+			content: "";
+			clear: both;
+			height: 0;
+		}
+		.content .ill{
+			border: none;
+		}
+		.middle-top p{
+			display: inline-block;
+			padding: 1.5rem 0 0 1.5rem; 			
+		}
+		.middle-top a{
+			font-size: 1.6rem;
+			color: #666666;
+			line-height: 1.6rem;
+		}
+		.middle-top strong{
+			/*display: block;*/
+			/*padding-left: 17rem;*/
+		}
+		.middle-top a{
+			background-image: url(./images/1.png);
+			background-size: 0.7rem 1.2rem;
+			background-repeat: no-repeat;
+			background-position: 3.8rem 0.1rem;
+			/*background-color: red;*/
+			/*width: 0.7rem;
+			height: 1.2rem;*/
+		}
+/*		.middle-top strong a{
+			display: inline-block;	
+			float: right;	
+			font-size: 1.3rem;
+			color: #999999;
+			line-height: 1.3rem;
+			padding-left: 0.7rem;
+			margin-right: 1rem;			
+		}*/
+		.middle li{
+			list-style: none;	
+			padding-top: 1.5rem;	
+			border-bottom:0.1rem solid  #F4F4F4;
+		}
+		.middle-left{
+			position: relative;
+		}
+		.middle-left img{
+			position: absolute;
+			left: 1.5rem;
+			top: 0.5rem;
+			width: 6rem;
+			height: 6rem;
+			border-radius: 100%;
+		}
+		.middle-right{
+			padding-left: 8.5rem;
+		}
+		.middle-right .middle-name{
+			padding-top: 0.5rem;
+		}
+		.middle-right .middle-name a{
+			font-size: 1.6rem;
+			color: #323232;
+			letter-spacing: -0.039rem;
+		}
+		.middle-right .middle-name a span{
+			font-size: 1.3rem;
+			color: #666666;
+			padding-left: 1rem;
+			letter-spacing: -0.031rem;
+		}
+		.middle-right .middle-label{
+			padding-top: 0.4rem;
+		}
+		.middle-right .middle-label a{
+			font-size: 1.3rem;
+			color: #666666;
+			letter-spacing: -0.031rem;
+		}
+		.middle-right .middle-content{
+			padding-top: 0.4rem;	
+		}
+		.middle-right .middle-content a{
+			font-size: 1.3rem;
+			color: #999999;
+			letter-spacing: -0.05rem;
+			line-height: 2rem;	
+		}
+		.middle-right .middle-fotter{
+			padding-top: 0.5rem;
+			padding-bottom: 1.2rem;
+		}
+		.middle-right .middle-fotter a strong{
+			font-size: 1.3rem;
+			color: #FF6134;
+			letter-spacing: -0.031rem;
+		}
+		.middle-right .middle-fotter a em{
+			font-size: 1.3rem;
+			color: #666666;
+			padding-left: 0.7rem;
+			letter-spacing: -0.031rem;
+		}
+		.middle-right .middle-fotter a span{
+			display: inline-block;
+			float: right;
+			margin-right: 2rem;
+			width: 5.4rem;
+			height: 1.5rem;
+			border-radius: 1rem;
+			color:#FF6134;
+			border:1px solid #FF6134;
+			text-align: center;
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+		}
+		.middle-top ul li{
+			padding: 1.5rem 0 1.5rem 0.5rem;
+			list-style: none;
+		}
+		.middle-top ul li p{
+			margin: 0 1.5rem 0 0;
+			font-size: 1.5rem;
+			color: #000000;
+			line-height: 1.6rem;
+		}
+		.middle-top .middle-bar{
+			/*display: inline-block;*/
+			float: right;
+			margin: 1.5rem 0.5rem 0 0;
+			display: block;
+			background-color: #999;
+			width: 2.1rem;
+			height: 1.2rem;
+		}
+		.middle-top .middle-nav span{
+			font-size: 0.9rem;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			line-height: 0.9rem;
+		}
+		.fotter-top p{
+			display: inline-block;
+			padding: 1.5rem 0 0 1.5rem; 	
+			font-size: 1.6rem;
+			color: #666666;
+			line-height: 1.6rem;		
+		}
+		.fotter-top span{
+			float: right;
+			margin: 1.5rem 0.5rem 0 0;
+			/*display: block;*/
+			/*background-color: #999;*/
+		}
+		.fotter-top span{
+			font-size: 1.3rem;
+			color: #999999;
+			line-height: 1.3rem;
+		}
+		.middle-top ul li em, .fotter-top em{
+			display: inline-block;
+			margin: 1.5rem 2.5rem 0 0;
+			float: right;
+			/*background-color: red;*/
+			background-image: url(./images/1.png);
+			background-repeat: no-repeat;
+			background-size: 0.7rem 1.2rem;
+			background-position: 0 0;
+			width: 0.7rem;
+			height: 1.2rem;
+		}
+		.fotter-top ul li{
+			border-bottom:0.1rem solid  #F4F4F4;
+			list-style: none;
+			padding: 1rem 0 2rem 0;
+		}
+		.fotter-left{
+			float: left;
+			position: relative;
+		}
+		.fotter-left img{
+			position: absolute;
+			top: 1.4rem;
+			left: 1.5rem;
+			width: 9rem;
+			height: 7.5rem;
+		}
+		.fotter-right{
+			padding: 0 0 0 10rem;
+		}
+		.fotter-right p{
+			font-size: 1.5rem;
+			color: #323232;
+			letter-spacing: -0.036rem;
+			line-height: 1.6rem;
+		}
+		.fotter-right .fotter-two{
+			padding-top: 4.7rem;
+			font-size: 1.3rem;
+			color: #999999;
+			letter-spacing: -0.031rem;
+			line-height: 1.3rem;
+		}
+		.box{
+			width: 100%;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="box">
+	<button class="box-btn">百度一下</button>
+
+	<div class="top">
+		
+	</div>
+	<div class="content">
+		<div class="fotter-top">
+			<p>
+				<p class="fotter-nav">相关科普资讯</p><em></em><span>更多</span>
+			</p>			
+		</div>
+		<ul >
+		<!-- 浮动是给需要清除浮动的父亲清楚浮动 -->
+			
+		</ul>
+	</div>
+	<div class="middle">
+		<div class="fotter-top">
+			<p>
+				<p class="fotter-nav">相关科普资讯</p><em></em><span>更多</span>
+			</p>			
+		</div>
+		<ul>
+		
+			<!-- <li class="ill clearfix">
+				<div class="middle-left">
+					<img src="./images/her.png" alt="">
+				</div>
+				<div class="middle-right">
+					<p class="middle-name">
+						<a href="">王坚韧</a>
+						<a href=""><span>皮肤科 副主任医师</span></a>
+					</p>
+					<p class="middle-label"><a href="">中国人民解放军总医院（301医院）</a></p>
+					<p class="middle-content"><a href="">擅长：眼科常见病，脸裂斑，视网膜静脉阻塞白内障，眼底出血，斜视，视网膜脱落，眼红病等…</a></p>
+					<p class="middle-fotter">
+						<a href=""><strong>¥5起</strong></a>
+						<a href=""><em>8792人购买</em></a>
+						<a href=""><span>特色服务</span></a>
+					</p>
+				</div>
+			</li> -->
+		</ul>
+	</div>
+	<div class="bottom">
+		<div class="middle-top">
+			<p>
+				<a href="">健康百科</a>			
+			</p>	
+			<ul class="clearfix">
+				<!-- <li><p>痤疮该怎么办？</p><em></em></li> -->
+				<!-- <li><p>怎样给痤疮分类</p><em></em></li> -->
+				<!-- <li><p>重要怎么一直痤疮</p><em></em></li> -->
+			</ul>		
+		</div>
+	</div>
+	<div class="fotter">
+		<div class="fotter-top">
+			<p>
+				<p class="fotter-nav">相关科普资讯</p><em></em><span>更多</span>
+			</p>	
+			<ul>
+				<li class="clearfix">
+					<div class="fotter-left">
+						<img src="./images/2.png" alt="">
+					</div>
+					<div class="fotter-right">
+						<p>把脸洗干净就不会长痘痘了吗？</p>
+						<p class="fotter-two">两性</p>
+					</div>
+				</li>
+				<li>
+					<div class="fotter-left">
+						<img src="./images/2.png" alt="">
+					</div>
+					<div class="fotter-right">
+						<p>把脸洗干净就不会长痘痘了吗？</p>
+						<p class="fotter-two">两性</p>
+					</div>
+				</li>
+				<li>
+					<div class="fotter-left">
+						<img src="./images/2.png" alt="">
+					</div>
+					<div class="fotter-right">
+						<p>把脸洗干净就不会长痘痘了吗？</p>
+						<p class="fotter-two">两性</p>
+					</div>
+				</li>
+			</ul>		
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(".box-btn").click(function(){
+				var sq=$(".box").val();
+			
+			$.ajax({
+				url:"http://test.zhituteam.com/fetch.php?query=%E5%8F%91%E7%83%A7",
+				type:"get",
+				dataType:"json",
+				data:{
+					query: sq,
+				},
+				success:function(res){
+					for(var i=0;i<res.search_results.length;i++){
+            			if(res.search_results[i].type=="DISEASE_DESC"){
+            			console.log(res.search_results[i].name);
+		          		  	var diseaseStr = '<p class="top-top"><a href="">'+res.search_results[i].name+'</a></p><div class="top-content"><p><a href="">'+res.search_results[i].desc+'</a></p></div><p class="top-bottom"><a href="#" class="top-left">就诊科室</a><a href="#" class="top-mid">病因</a><a href="#" class="top-btm">治疗</a></p>';
+		         		$(".top").html(diseaseStr);
+	          			}	
+	            		if(res.search_results[i].type=="SIMILAR_PRO"){
+	            			var askStr='';
+	            		for(var j=0;j<res.search_results[i].result.length;j++){
+	            			askStr += '<li class="ill clearfix"><div class="content-left"><img src="./images/what.png" alt=""></div><div class="content-right"><p><a href="">'+res.search_results[i].result[j].ask+'</a></p></div></li>';
+	            		}
+	            		$(".content ul").html(askStr);
+	        	    	}
+		          		if(res.search_results[i].type=="DOCTOR_RELATED"){
+		            	var doctorStr="";
+		            	for(j=0;j<res.search_results[i].result.length;j++){
+		            		doctorStr +='<li class="clearfix"><div class="middle-left"><img src="./images/her.png" alt=""></div><div class="middle-right"><p class="middle-name"><a href="">'+res.search_results[i].result[j].name+'</a><a href=""><span>'+res.search_results[i].result[j].title+'</span></a></p><p class="middle-label"><a href="">'+res.search_results[i].result[j].hospital_id+'</a></p><p class="middle-content"><a href="">'+res.search_results[i].result[j].good_at+'</a></p><p class="middle-fotter"><a href=""><strong>'+res.search_results[i].result[j].price_text+'</strong></a><a href=""><em>'+res.search_results[i].result[j].reply_num+'</em></a><a href=""><span>特色服务</span></a></p></div></li>'
+		            	}
+		            	$(".middle ul").html(doctorStr);
+		          		}
+		                if(res.search_results[i].type=="PEDIA_INFO"){
+		            	var pediaStr="";
+		            		for(j=0;j<res.search_results[i].result.length;j++){
+								pediaStr +='<li><p class="middle-nav">'+res.search_results[i].result[j].title+'</p><span class="middle-bar">广告</span></li>'
+		            	}
+		            	$(".bottom ul").html(pediaStr);
+		           	 	}
+		       		}
+
+				},
+				error: function(res){
+                    console.log(res);
+                }
+                })
+			})
+		})
+			// var res = {
+   //              "fast_qa": false,
+   //              "search_results": [
+   //                  {
+   //                      "name": "阑尾炎",
+   //                      "id": "63757",
+   //                      "sub_property_list": [
+   //                          {
+   //                              "value": "就诊科室",
+   //                              "key": "relation_clinic"
+   //                          },
+   //                          {
+   //                              "value": "症状",
+   //                              "key": "symptoms"
+   //                          },
+   //                          {
+   //                              "value": "病因",
+   //                              "key": "pathogeny"
+   //                          },
+   //                          {
+   //                              "value": "治疗",
+   //                              "key": "treatment"
+   //                          }
+   //                      ],
+   //                      "type": "DISEASE_DESC",
+   //                      "query_str": "阑尾炎手术",
+   //                      "desc": "阑尾炎(appendicitis)是指阑尾由于多种因素而形成的炎性改变.它是一种常见病,其预后取决于是否及时的诊断和治疗.早期诊治,病人多可短期内康复,死亡率为0.1%一0.2%;如果延误诊断和治疗可引起严重的并发症,甚至造成死亡.临床上常有右下腹部疼痛、体温升高、呕吐和中性粒细胞增多等表现."
+   //                  },
+   //                  {
+   //                      "type": "SIMILAR_PRO",
+   //                      "result": [
+   //                          {
+   //                              "score": "2.154495",
+   //                              "doctor": {
+   //                                  "name": "杨云娇",
+   //                                  "title": "主治医师",
+   //                                  "hospital": "北京协和医院协和医院协和医院协和医院协和医院",
+   //                                  "good_at": "风湿关节炎、系统性红斑狼疮等的诊治。",
+   //                                  "id": "clinic_neike_yangyunjiao",
+   //                                  "image": "https://media2.chunyuyisheng.com/@/media/images/2012/09/01/c179a197a392.jpg"
+   //                              },
+   //                              "ask": "急性<span class='s-hl'>阑尾炎</span>需要<span class='s-hl'>手术</span>么，用的什么药，大概几天能康复",
+   //                              "clinic_no": "3",
+   //                              "answer": "如果明确诊断的<span class='s-hl'>阑尾炎</span>，首选<span class='s-hl'>手术</span>治疗。同时加抗感染药物，一般是涵盖抗肠道细菌的头孢三代或喹诺酮类药物等，再加上静脉营养和对症药物。术后急性期大概1-2周，完全恢复的差不多可能一月。",
+   //                              "id": "126736"
+   //                          },
+   //                          {
+   //                              "score": "2.0298233",
+   //                              "doctor": {
+   //                                  "name": "曲华伟",
+   //                                  "title": "主治医师",
+   //                                  "hospital": "山东省立医院",
+   //                                  "good_at": "男科，结石，泌尿系感染，排尿困难相关疾病（前列腺增生及女性膀胱颈口硬化症），肾脏肿瘤，肾积水，女性尿失禁，高血压的外科治疗（肾上腺相关疾病）等。",
+   //                                  "id": "clinic_miniaowaike_quhuawei",
+   //                                  "image": "https://media2.chunyuyisheng.com/@/media/images/2012/09/04/b08f3960f6e9.jpg"
+   //                              },
+   //                              "ask": "你好大夫，长期<span class='s-hl'>阑尾炎</span>会不会引起肠粘连？",
+   //                              "clinic_no": "8",
+   //                              "answer": "<span class='s-hl'>阑尾炎</span>多长时间了？ 最好做<span class='s-hl'>手术</span> 可以做个腹腔镜阑尾切除术。 不客气",
+   //                              "id": "484497"
+   //                          },
+   //                          {
+   //                              "score": "2.0263567",
+   //                              "doctor": {
+   //                                  "name": "张国滨",
+   //                                  "title": "主治医师",
+   //                                  "hospital": "北京天坛医院",
+   //                                  "good_at": "擅长治疗颅脑外伤、颅脑肿瘤、脑血管病等神经外科疾病。",
+   //                                  "id": "clinic_sjwk_zgb_13705955517",
+   //                                  "image": "https://media2.chunyuyisheng.com/@/media/images/2013/02/18/%E5%BC%A0%E5%9B%BD%E6%BB%A8_%E5%89%AF%E6%9C%AC.png"
+   //                              },
+   //                              "ask": "你好医生，我<span class='s-hl'>阑尾炎</span>复发后吊瓶消炎后总是腹胀。",
+   //                              "clinic_no": "22",
+   //                              "answer": "腹胀是<span class='s-hl'>阑尾炎</span>所致的肠麻痹，你先消炎治疗，建议你行<span class='s-hl'>手术</span>切除，否则反复<span class='s-hl'>阑尾炎</span>一旦穿孔会有生命危险的 <span class='s-hl'>手术</span>费用各个地方不同，是否微创也有区别，如果腹腔镜<span class='s-hl'>手术</span>1万左右，普通的就几千，当然术后还需要抗炎等处理。",
+   //                              "id": "594521"
+   //                          }
+   //                      ],
+   //                      "query_str": "阑尾炎手术",
+   //                      "name": "相关咨询记录"
+   //                  },
+   //                  {
+   //                      "type": "DOCTOR_RELATED",
+   //                      "name": "医生推荐",
+   //                      "result": [
+   //                          {
+   //                              "thank_num": 0,
+   //                              "name": "官方",
+   //                              "title": "主任医师",
+   //                              "hospital_id": "lzuvs7kgp1b6dftj",
+   //                              "image": "8SzrB?imageMogr2/thumbnail/150x",
+   //                              "reply_num": 65233063,
+   //                              "price_text": "￥4起",
+   //                              "good_at": "对法国队的",
+   //                              "price": "4",
+   //                              "is_famous_doctor": false,
+   //                              "clinic": "外科",
+   //                              "clinic_no": "9",
+   //                              "graph_price": -1,
+   //                              "purchase_num": 2,
+   //                              "special_service": true,
+   //                              "hospital": "河北燕达医院",
+   //                              "id": "Eedng",
+   //                              "hospital_tag": ""
+   //                          },
+   //                          {
+   //                              "thank_num": 0,
+   //                              "name": "赵振民",
+   //                              "title": "主任医师",
+   //                              "hospital_id": "lzuvs7kgp1b6dftj",
+   //                              "image": "",
+   //                              "reply_num": 0,
+   //                              "price_text": "￥1起",
+   //                              "good_at": "口腔颌面外科（唇腭裂，唇裂术后继发畸形，腭咽闭合不全，软腭再造，上颌后缩，唇腭裂-颅面畸形等），整形美容（面部轮廓整形美容、吸脂、体形雕塑、脂肪移植、瘢痕整形美",
+   //                              "price": "1",
+   //                              "is_famous_doctor": false,
+   //                              "clinic": "外科",
+   //                              "clinic_no": "9",
+   //                              "graph_price": 36,
+   //                              "purchase_num": 0,
+   //                              "special_service": true,
+   //                              "hospital": "河北燕达医院",
+   //                              "id": "f7f4e47f87a44939",
+   //                              "hospital_tag": ""
+   //                          }
+   //                      ]
+   //                  },
+   //                  {
+   //                      "type": "PEDIA_INFO",
+   //                      "result": [
+   //                          {
+   //                              "url": "http://www.chunyuyisheng.com/webapp/pedia_answer/17206/detail/",
+   //                              "id": 17206,
+   //                              "title": "为什么急性<span class='s-hl'>阑尾炎</span>发作需<span class='s-hl'>手术</span>治疗？"
+   //                          },
+   //                          {
+   //                              "url": "http://www.chunyuyisheng.com/webapp/pedia_answer/17466/detail/",
+   //                              "id": 17466,
+   //                              "title": "怀孕得了<span class='s-hl'>阑尾炎</span>能<span class='s-hl'>手术</span>吗？"
+   //                          },
+   //                          {
+   //                              "url": "http://www.chunyuyisheng.com/webapp/pedia_answer/17827/detail/",
+   //                              "id": 17827,
+   //                              "title": "为什么慢性<span class='s-hl'>阑尾炎</span>急性发作要<span class='s-hl'>手术</span>吗"
+   //                          }
+   //                      ],
+   //                      "query_str": "阑尾炎手术",
+   //                      "name": "健康百科"
+   //                  },
+   //                  {
+   //                      "type": "AD_INFO",
+   //                      "result": {}
+   //                  }
+   //              ]
+   //          }
+          
+	</script>
+</body>
+</html>
